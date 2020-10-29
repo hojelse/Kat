@@ -7,8 +7,8 @@
         "main": "./dist/index.js"
     },
     "scripts": {
-        "build": "NODE_ENV=production tsc",
-        "dev": "NODE_ENV=development tsc",
+        "build": "cross-env NODE_ENV=production tsc",
+        "dev": "cross-env NODE_ENV=development tsc",
         "watch": "nodemon src/index.ts",
         "start": "tsc && node dist/index.js",
         "lint": "eslint 'src/**/*.{js,ts,tsx}'",
@@ -32,7 +32,8 @@
         "got": "^11.7.0",
         "pretty-error": "^2.1.1",
         "unzipper": "^0.10.11",
-        "yargs": "^16.0.3"
+        "yargs": "^16.0.3",
+        "cross-env": "^7.0.2"
     },
     "devDependencies": {
         "@types/nock": "^11.1.0",
@@ -41,6 +42,7 @@
         "@types/yargs": "^15.0.7",
         "@typescript-eslint/eslint-plugin": "^4.3.0",
         "@typescript-eslint/parser": "^4.3.0",
+        "cross-env": "^7.0.2",
         "eslint": "^7.10.0",
         "eslint-config-prettier": "^6.12.0",
         "eslint-plugin-import": "^2.22.1",
